@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Crab",
+    "displayName": "&fCrab",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30106,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 2.9270196,
+    "hunger": 2.195,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

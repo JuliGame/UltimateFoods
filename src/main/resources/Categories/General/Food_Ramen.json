@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Ramen",
+    "displayName": "&fRamen",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30284,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.8022195,
+    "hunger": 0.84,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

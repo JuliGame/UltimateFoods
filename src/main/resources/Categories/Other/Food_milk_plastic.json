@@ -1,0 +1,26 @@
+{
+    "uniqueID": "milk_plastic",
+    "displayName": "&fmilk plastic",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30216,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.4354868,
+    "hunger": 1.01,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

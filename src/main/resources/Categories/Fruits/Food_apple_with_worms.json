@@ -1,0 +1,26 @@
+{
+    "uniqueID": "apple_with_worms",
+    "displayName": "&fapple with worms",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30009,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 1.8150982,
+    "hunger": 1.58,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

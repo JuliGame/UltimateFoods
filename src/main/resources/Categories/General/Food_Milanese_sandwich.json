@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Milanese_sandwich",
+    "displayName": "&fMilanese sandwich",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30211,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 1.8690122,
+    "hunger": 1.665,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

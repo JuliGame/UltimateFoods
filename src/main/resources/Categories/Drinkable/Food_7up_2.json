@@ -1,0 +1,26 @@
+{
+    "uniqueID": "7up_2",
+    "displayName": "&f7up 2",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30002,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 1.3967988,
+    "hunger": 1.355,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Lemon_Pie",
+    "displayName": "&fLemon Pie",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30192,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.72073203,
+    "hunger": 0.8025,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

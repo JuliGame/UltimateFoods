@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Banana_and_chocolate_dessert",
+    "displayName": "&fBanana and chocolate dessert",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30022,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 2.7071524,
+    "hunger": 2.19,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

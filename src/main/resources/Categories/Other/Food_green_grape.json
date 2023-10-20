@@ -1,0 +1,26 @@
+{
+    "uniqueID": "green_grape",
+    "displayName": "&fgreen grape",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30157,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.7335313,
+    "hunger": 0.8175,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

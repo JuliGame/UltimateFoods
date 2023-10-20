@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Bunch_of_Herbs",
+    "displayName": "&fBunch of Herbs",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30038,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 1.3463762,
+    "hunger": 1.11,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

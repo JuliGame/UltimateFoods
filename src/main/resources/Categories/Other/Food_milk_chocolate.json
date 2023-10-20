@@ -1,0 +1,26 @@
+{
+    "uniqueID": "milk_chocolate",
+    "displayName": "&fmilk chocolate",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30213,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.6425682,
+    "hunger": 0.7,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

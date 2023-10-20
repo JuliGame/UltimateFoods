@@ -1,0 +1,26 @@
+{
+    "uniqueID": "lata",
+    "displayName": "&flata",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30184,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 1.624632,
+    "hunger": 1.51,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

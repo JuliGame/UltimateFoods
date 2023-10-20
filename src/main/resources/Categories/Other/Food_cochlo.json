@@ -1,0 +1,26 @@
+{
+    "uniqueID": "cochlo",
+    "displayName": "&fcochlo",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30095,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 1.792844,
+    "hunger": 1.805,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

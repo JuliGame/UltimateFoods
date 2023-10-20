@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Salad_Bowl",
+    "displayName": "&fSalad Bowl",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30300,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 1.5103439,
+    "hunger": 1.63,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

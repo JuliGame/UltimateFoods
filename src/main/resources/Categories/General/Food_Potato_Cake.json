@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Potato_Cake",
+    "displayName": "&fPotato Cake",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30271,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.6831341,
+    "hunger": 0.69,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

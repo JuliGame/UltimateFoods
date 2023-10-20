@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Daikiri2",
+    "displayName": "&fDaikiri2",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30111,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 1.0111454,
+    "hunger": 1.14,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "uniqueID": "grape_soda",
+    "displayName": "&fgrape soda",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30152,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.6184272,
+    "hunger": 0.805,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

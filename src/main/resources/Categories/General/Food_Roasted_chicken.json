@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Roasted_chicken",
+    "displayName": "&fRoasted chicken",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30298,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 1.1522189,
+    "hunger": 0.92,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

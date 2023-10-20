@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Default_burrito",
+    "displayName": "&fDefault burrito",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30113,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 1.6337643,
+    "hunger": 1.46,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

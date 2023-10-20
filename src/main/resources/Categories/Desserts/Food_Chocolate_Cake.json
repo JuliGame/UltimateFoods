@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Chocolate_Cake",
+    "displayName": "&fChocolate Cake",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30085,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.5813033,
+    "hunger": 0.675,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

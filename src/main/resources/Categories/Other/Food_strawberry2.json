@@ -1,0 +1,26 @@
+{
+    "uniqueID": "strawberry2",
+    "displayName": "&fstrawberry2",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30324,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.54074997,
+    "hunger": 0.4025,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

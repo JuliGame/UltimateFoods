@@ -1,0 +1,26 @@
+{
+    "uniqueID": "mani",
+    "displayName": "&fmani",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30196,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 1.8613831,
+    "hunger": 1.48,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Tomato_Pizza",
+    "displayName": "&fTomato Pizza",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30349,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.19932148,
+    "hunger": 0.1525,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

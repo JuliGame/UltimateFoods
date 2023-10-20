@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Waffles",
+    "displayName": "&fWaffles",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30357,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.95432436,
+    "hunger": 0.9125,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

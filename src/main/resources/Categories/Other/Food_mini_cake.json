@@ -1,0 +1,26 @@
+{
+    "uniqueID": "mini_cake",
+    "displayName": "&fmini cake",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30217,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.55839986,
+    "hunger": 0.74,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

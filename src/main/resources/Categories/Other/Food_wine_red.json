@@ -1,0 +1,26 @@
+{
+    "uniqueID": "wine_red",
+    "displayName": "&fwine red",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30370,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.5737143,
+    "hunger": 0.81,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

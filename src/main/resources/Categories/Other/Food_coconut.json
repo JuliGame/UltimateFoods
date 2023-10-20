@@ -1,0 +1,26 @@
+{
+    "uniqueID": "coconut",
+    "displayName": "&fcoconut",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30096,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.3418312,
+    "hunger": 0.375,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

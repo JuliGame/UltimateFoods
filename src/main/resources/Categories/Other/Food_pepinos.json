@@ -1,0 +1,26 @@
+{
+    "uniqueID": "pepinos",
+    "displayName": "&fpepinos",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30244,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 2.1078272,
+    "hunger": 1.7825,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "uniqueID": "wine_white2",
+    "displayName": "&fwine white2",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30372,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.31539533,
+    "hunger": 0.835,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

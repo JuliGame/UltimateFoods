@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Orange_dessert",
+    "displayName": "&fOrange dessert",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30229,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 1.7896433,
+    "hunger": 1.53,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

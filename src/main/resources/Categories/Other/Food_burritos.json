@@ -1,0 +1,26 @@
+{
+    "uniqueID": "burritos",
+    "displayName": "&fburritos",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30041,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.8834807,
+    "hunger": 0.9425,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

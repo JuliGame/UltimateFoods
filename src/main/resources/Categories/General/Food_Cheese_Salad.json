@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Cheese_Salad",
+    "displayName": "&fCheese Salad",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30062,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 1.4998523,
+    "hunger": 1.3725,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

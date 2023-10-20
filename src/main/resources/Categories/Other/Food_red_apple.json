@@ -1,0 +1,26 @@
+{
+    "uniqueID": "red_apple",
+    "displayName": "&fred apple",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30286,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 0.9139894,
+    "hunger": 0.9275,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}

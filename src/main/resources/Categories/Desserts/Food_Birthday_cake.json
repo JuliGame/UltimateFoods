@@ -1,0 +1,26 @@
+{
+    "uniqueID": "Birthday_cake",
+    "displayName": "&fBirthday cake",
+    "description": [],
+    "instantEat": false,
+    "foodMaterial": "APPLE",
+    "headTexture": "",
+    "customModelData": 30032,
+    "permission": "",
+    "price": 0.0,
+    "saturation": 1.8142909,
+    "hunger": 2.29,
+    "health": 0.0,
+    "commands": [],
+    "recipe": {
+        "shape": [
+            "xxx",
+            "xxx",
+            "xxx"
+        ],
+        "materials": {
+            "x": "AIR"
+        },
+        "craft_amount": 1
+    }
+}
