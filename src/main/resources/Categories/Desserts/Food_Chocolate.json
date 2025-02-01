@@ -14,13 +14,18 @@
     "commands": [],
     "recipe": {
         "shape": [
-            "xxx",
-            "xxx",
-            "xxx"
+            "bcd",
+            "cdc",
+            "dee"
         ],
         "materials": {
-            "x": "AIR"
+            "x": "AIR",
+            "b": "COCOA BEANS",
+            "c": "MILK",
+            "d": "SUGAR",
+            "e": "AIR"
         },
+        "no-order": false,
         "craft_amount": 1
     }
 }

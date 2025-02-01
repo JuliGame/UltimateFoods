@@ -32,6 +32,7 @@ public class PlayerListener implements Listener {
         ItemStack itemStack = event.getItem().clone();
 
         Player player = event.getPlayer();
+        int slot = player.getInventory().getItemInMainHand().equals(itemStack) ? player.getInventory().getHeldItemSlot() : 40;
 
         Food food = GetFoodFromItemStack(itemStack);
         if (food == null) {
@@ -44,7 +45,7 @@ public class PlayerListener implements Listener {
         event.setCancelled(true);
         if (itemStack.getAmount() > 1) {
             itemStack.setAmount(itemStack.getAmount() - 1);
-            player.getInventory().setItemInMainHand(itemStack);
+            player.getInventory().setItem(slot, itemStack);
         } else if (player.getInventory().getItemInMainHand().equals(itemStack)) {
             player.getInventory().setItemInMainHand(new ItemStack(Material.AIR));
         } else if (player.getInventory().getItemInOffHand().equals(itemStack)) {

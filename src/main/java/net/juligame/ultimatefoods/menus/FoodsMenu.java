@@ -7,7 +7,6 @@ import dev.juligame.util.menu.layeredMenu.LayeredMenu;
 import net.juligame.ultimatefoods.UltimateFoods;
 import net.juligame.ultimatefoods.classes.Food;
 import org.bukkit.ChatColor;
-import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;
@@ -63,7 +62,10 @@ public class FoodsMenu extends LayeredMenu {
                         return;
                     }
                     if (clickType.isRightClick() && food.recipe != null) {
-                        (new RecipeShow(food.recipe, food.getItemStack(), menu, player.hasPermission("uf.edit.op"), food)).openMenu(player);
+                        if (player.hasPermission("uf.edit.op"))
+                            (new RecipeEdit(food.recipe, food.getItemStack(), menu, food)).openMenu(player);
+                        else
+                            new RecipeShow(food.recipe, food.getItemStack(), menu).openMenu(player);
                         return;
                     }
                     if (player.hasPermission("uf.get")) {

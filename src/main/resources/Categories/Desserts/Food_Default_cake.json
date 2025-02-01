@@ -14,13 +14,19 @@
     "commands": [],
     "recipe": {
         "shape": [
-            "xxx",
-            "xxx",
-            "xxx"
+            "bcb",
+            "cdc",
+            "efe"
         ],
         "materials": {
-            "x": "AIR"
+            "x": "AIR",
+            "b": "AIR",
+            "c": "SUGAR",
+            "d": "WHEAT",
+            "e": "MILK",
+            "f": "EGG"
         },
+        "no-order": false,
         "craft_amount": 1
     }
 }

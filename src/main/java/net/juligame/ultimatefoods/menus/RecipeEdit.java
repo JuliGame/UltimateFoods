@@ -8,12 +8,10 @@ import dev.lone.itemsadder.api.CustomStack;
 import net.juligame.ultimatefoods.UltimateFoods;
 import net.juligame.ultimatefoods.classes.Food;
 import net.juligame.ultimatefoods.classes.Recipe;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,32 +21,30 @@ import java.util.Map;
 import static net.juligame.ultimatefoods.classes.Food.foods;
 import static net.juligame.ultimatefoods.listeners.PlayerListener.GetFoodFromItemStack;
 
-public class RecipeShow
+public class RecipeEdit
         extends BackableMenu {
     String[] shape;
     Map<Character, String> materials;
     ItemStack itemStack;
     Menu menu;
-    boolean op;
     String Ishape[][];
     Food food;
 
-    public RecipeShow(Recipe recipe, ItemStack itemStack, Menu menu, boolean op, Food food) {
+    public RecipeEdit(Recipe recipe, ItemStack itemStack, Menu menu, Food food) {
         this.shape = recipe.getShape();
         this.materials = recipe.getMaterials();
         this.itemStack = itemStack;
         this.menu = menu;
-        this.op = op;
         Ishape = new String[][]{
-                {RecipeShow.this.materials.get(RecipeShow.this.shape[0].charAt(0)),
-                        RecipeShow.this.materials.get(RecipeShow.this.shape[0].charAt(1)),
-                        RecipeShow.this.materials.get(RecipeShow.this.shape[0].charAt(2))},
-                {RecipeShow.this.materials.get(RecipeShow.this.shape[1].charAt(0)),
-                        RecipeShow.this.materials.get(RecipeShow.this.shape[1].charAt(1)),
-                        RecipeShow.this.materials.get(RecipeShow.this.shape[1].charAt(2))},
-                {RecipeShow.this.materials.get(RecipeShow.this.shape[2].charAt(0)),
-                        RecipeShow.this.materials.get(RecipeShow.this.shape[2].charAt(1)),
-                        RecipeShow.this.materials.get(RecipeShow.this.shape[2].charAt(2))},
+                {RecipeEdit.this.materials.get(RecipeEdit.this.shape[0].charAt(0)),
+                        RecipeEdit.this.materials.get(RecipeEdit.this.shape[0].charAt(1)),
+                        RecipeEdit.this.materials.get(RecipeEdit.this.shape[0].charAt(2))},
+                {RecipeEdit.this.materials.get(RecipeEdit.this.shape[1].charAt(0)),
+                        RecipeEdit.this.materials.get(RecipeEdit.this.shape[1].charAt(1)),
+                        RecipeEdit.this.materials.get(RecipeEdit.this.shape[1].charAt(2))},
+                {RecipeEdit.this.materials.get(RecipeEdit.this.shape[2].charAt(0)),
+                        RecipeEdit.this.materials.get(RecipeEdit.this.shape[2].charAt(1)),
+                        RecipeEdit.this.materials.get(RecipeEdit.this.shape[2].charAt(2))},
         };
         this.food = food;
     }
@@ -79,7 +75,7 @@ public class RecipeShow
 
         botones.add(15,new Button() {
             public ItemStack getButtonItem(Player player) {
-                return RecipeShow.this.itemStack;
+                return RecipeEdit.this.itemStack;
             }
         });
         return botones;
@@ -88,12 +84,11 @@ public class RecipeShow
     Button getButton(int x, int y){
         return new Button() {
             public ItemStack getButtonItem(Player player) {
-                return RecipeShow.this.getItemStack(Ishape[x][y]);
+                return RecipeEdit.this.getItemStack(Ishape[x][y]);
             }
             @Override
             public boolean shouldCancel(Player player, int slot, ClickType clickType) {
-//                return true;
-                return !op;
+                return false;
             }
 
             @Override

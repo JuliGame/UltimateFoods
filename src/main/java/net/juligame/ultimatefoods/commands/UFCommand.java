@@ -85,7 +85,7 @@ public class UFCommand
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 0 || args[0].equalsIgnoreCase("help")) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8|---------------&3[&a&eUltimate&aFoods&3-&61.1.4&3]&8----------------|"));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8|---------------&3[&a&eUltimate&aFoods&3-&61.2.0&3]&8----------------|"));
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "/&3uf help &8- &dProvides the list of available commands"));
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "/&3uf create [CategoryName] &8- &dIt creates a category for you to add food"));
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "/&3uf get [FoodID] &8- &dGives you a food according to the specified ID"));

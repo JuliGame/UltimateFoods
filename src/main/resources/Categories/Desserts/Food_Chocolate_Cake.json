@@ -14,13 +14,17 @@
     "commands": [],
     "recipe": {
         "shape": [
-            "xxx",
-            "xxx",
-            "xxx"
+            "bbb",
+            "bcb",
+            "bdb"
         ],
         "materials": {
-            "x": "AIR"
+            "x": "AIR",
+            "b": "AIR",
+            "c": "Chocolate",
+            "d": "SUGAR"
         },
-        "craft_amount": 1
+        "no-order": false,
+        "craft_amount": 2
     }
 }
