@@ -203,16 +203,71 @@ public class Food extends JConfig {
             if (currentRecipe == null)
                 currentRecipe = new ShapedRecipe(new NamespacedKey(UltimateFoods.instance, this.uniqueID.replace(" ", "_")), is);
 
-            currentRecipe.shape(this.recipe.getShape());
+            // Prepare shape removing any keys that intentionally map to AIR/empty
+            String[] originalShape = this.recipe.getShape();
+            String[] adjustedShape = Arrays.copyOf(originalShape, originalShape.length);
+
+            for (Map.Entry<Character, String> entry : this.recipe.getMaterials().entrySet()) {
+                Character key = entry.getKey();
+                String value = entry.getValue();
+                if (value == null || value.trim().isEmpty() || value.equalsIgnoreCase("air")) {
+                    for (int i = 0; i < adjustedShape.length; i++) {
+                        adjustedShape[i] = adjustedShape[i].replace(key, ' ');
+                    }
+                }
+            }
+
+            // Ensure the shape is rectangular (Bukkit requires equal-length rows, max 3)
+            int maxLen = 0;
+            for (String line : adjustedShape) {
+                if (line != null) {
+                    maxLen = Math.max(maxLen, line.length());
+                }
+            }
+            if (maxLen == 0 || maxLen > 3) {
+                UltimateFoods.instance.getLogger().log(Level.SEVERE, "Error while creating recipe for " + this.uniqueID + " (" + this.displayName + ")");
+                UltimateFoods.instance.getLogger().log(Level.SEVERE, "Recipe shape is not valid (width must be 1-3).");
+                return false;
+            }
+            for (int i = 0; i < adjustedShape.length; i++) {
+                String line = adjustedShape[i];
+                if (line == null) line = "";
+                if (line.length() < maxLen) {
+                    StringBuilder sb = new StringBuilder(line);
+                    while (sb.length() < maxLen) sb.append(' ');
+                    adjustedShape[i] = sb.toString();
+                }
+            }
+
+            currentRecipe.shape(adjustedShape);
+
             for (Character key : this.recipe.getMaterials().keySet()) {
-                Material m = Material.getMaterial(this.recipe.getMaterials().get(key).toUpperCase());
-                if (m != null) {
+                String mappedValue = this.recipe.getMaterials().get(key);
+
+                // Skip keys not present in the adjusted shape
+                boolean keyInShape = false;
+                for (String line : adjustedShape) {
+                    if (line.indexOf(key) >= 0) { keyInShape = true; break; }
+                }
+                if (!keyInShape) continue;
+
+                // Skip AIR/empty mappings
+                if (mappedValue == null || mappedValue.trim().isEmpty() || mappedValue.equalsIgnoreCase("air")) {
+                    continue;
+                }
+
+                // Normalize material names (e.g., "cocoa beans" -> "COCOA_BEANS", "milk" -> "MILK_BUCKET")
+                String normalized = mappedValue.trim().toUpperCase().replace(' ', '_');
+                if (normalized.equals("MILK")) normalized = "MILK_BUCKET";
+
+                Material m = Material.getMaterial(normalized);
+                if (m != null && m != Material.AIR) {
                     RecipeChoice.MaterialChoice materialChoice = new RecipeChoice.MaterialChoice(m);
                     currentRecipe.setIngredient(key.charValue(), materialChoice);
                     continue;
                 }
 
-                Food food = foods.get(this.recipe.getMaterials().get(key));
+                Food food = foods.get(mappedValue);
                 if (food != null) {
                     RecipeChoice.ExactChoice exactChoice = new RecipeChoice.ExactChoice(food.getItemStack());
                     currentRecipe.setIngredient(key, exactChoice);
@@ -220,7 +275,7 @@ public class Food extends JConfig {
                 }
 
                 if (UltimateFoods.UsingItemsAdders) {
-                    CustomStack stack = CustomStack.getInstance(key.toString());
+                    CustomStack stack = CustomStack.getInstance(mappedValue);
                     if (stack != null) {
                         RecipeChoice.ExactChoice exactChoice = new RecipeChoice.ExactChoice(stack.getItemStack());
                         currentRecipe.setIngredient(key.charValue(), exactChoice);

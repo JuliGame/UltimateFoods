@@ -83,7 +83,13 @@ public final class UltimateFoods extends JavaPlugin {
                 food.RegisterRecipe();
             }
         }else {
-            Bukkit.getPluginManager().registerEvents(new IAListener(), instance);
+            try {
+                Bukkit.getPluginManager().registerEvents(new IAListener(), instance);
+            } catch (Exception e) {
+                Bukkit.getLogger().log(Level.SEVERE, "Could not register IAListener!");
+                Bukkit.getLogger().log(Level.SEVERE, "Please contact the developer via the official discord!");
+                e.printStackTrace();
+            }
         }
     }
 
