@@ -17,6 +17,7 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
+import org.bukkit.inventory.meta.components.CustomModelDataComponent;
 
 import java.util.*;
 import java.util.logging.Level;
@@ -136,7 +137,12 @@ public class Food extends JConfig {
         if (!isItemsAdder){
             itemStack.setAmount(1);
             itemMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', displayName));
-            itemMeta.setCustomModelData(Integer.valueOf(this.customModelData));
+            
+            CustomModelDataComponent cmd = itemMeta.getCustomModelDataComponent();
+
+            cmd.setStrings(List.of(this.customModelData + ""));
+
+            itemMeta.setCustomModelDataComponent(cmd);
 
             List<String> newDesc = (List<String>) description.clone();
             newDesc.replaceAll(textToTranslate -> ChatColor.translateAlternateColorCodes('&', textToTranslate));

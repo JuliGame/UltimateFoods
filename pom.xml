@@ -126,8 +126,8 @@
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.14-R0.1-SNAPSHOT</version>
+            <artifactId>spigot-api</artifactId>        
+            <version>1.21.8-R0.1-SNAPSHOT</version> 
             <scope>provided</scope>
         </dependency>
 
