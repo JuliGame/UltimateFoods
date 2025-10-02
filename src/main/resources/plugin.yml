@@ -1,7 +1,7 @@
 name: UltimateFood
-version: '1.4.0'
+version: '1.5.0'
 main: net.juligame.ultimatefoods.UltimateFoods
-api-version: 1.14
+api-version: '1.21'
 authors: [ JuliGame, RoloGod ]
 description: The Ultimate Food plugin ;)
 commands:

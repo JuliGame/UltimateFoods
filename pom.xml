@@ -6,7 +6,7 @@
 
     <groupId>net.juligame</groupId>
     <artifactId>UltimateFoods</artifactId>
-    <version>1.3.0</version>
+    <version>1.5.0</version>
     <packaging>jar</packaging>
 
     <name>Ultimate Foods</name>
@@ -40,7 +40,7 @@
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <minimizeJar>true</minimizeJar>
-                            <outputFile>C:\Users\7Dev\Desktop\1.21.4\plugins\${project.artifactId}-${project.version}.jar</outputFile>
+                            <outputFile>C:\Users\7Dev\Desktop\1.21.9\plugins\${project.artifactId}-${project.version}.jar</outputFile>
                             <relocations>
                                 <relocation>
                                     <pattern>com.google.gson</pattern>
@@ -99,6 +99,10 @@
 
     <repositories>
         <repository>
+            <id>papermc-repo</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
+        </repository>
+        <repository>
             <id>spigotmc-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
@@ -125,9 +129,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>        
-            <version>1.21.8-R0.1-SNAPSHOT</version> 
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>        
+            <version>1.21.9-R0.1-SNAPSHOT</version> 
             <scope>provided</scope>
         </dependency>
 
@@ -157,7 +161,7 @@
         <dependency>
             <groupId>com.mojang</groupId>
             <artifactId>authlib</artifactId>
-            <version>1.5.21</version>
+            <version>6.0.54</version>
             <scope>provided</scope>
         </dependency>
 

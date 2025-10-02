@@ -1,8 +1,9 @@
 package net.juligame.ultimatefoods.utils;
 // Copyright (c) 2017 deanveloper (see LICENSE.md for more info)
+// Updated for Paper 1.21.9+ using PlayerProfile API
 
-import com.mojang.authlib.GameProfile;
-import com.mojang.authlib.properties.Property;
+import com.destroystokyo.paper.profile.PlayerProfile;
+import com.destroystokyo.paper.profile.ProfileProperty;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.SkullType;
@@ -11,9 +12,6 @@ import org.bukkit.block.Skull;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Base64;
@@ -23,11 +21,6 @@ public class SkullCreator {
     private SkullCreator() {}
 
     private static boolean warningPosted = false;
-
-    // some reflection stuff to be used when setting a skull's profile
-    private static Field blockProfileField;
-    private static Method metaSetProfileMethod;
-    private static Field metaProfileField;
 
     /**
      * Creates a player skull, should work in both legacy and new Bukkit APIs.
@@ -238,7 +231,6 @@ public class SkullCreator {
     }
 
     private static String urlToBase64(String url) {
-
         URI actualUrl;
         try {
             actualUrl = new URI(url);
@@ -249,49 +241,47 @@ public class SkullCreator {
         return Base64.getEncoder().encodeToString(toEncode.getBytes());
     }
 
-    private static GameProfile makeProfile(String b64) {
-        // random uuid based on the b64 string
+    /**
+     * Creates a PlayerProfile with custom texture from base64 string.
+     * Uses the Paper PlayerProfile API for Paper 1.21.9+.
+     * 
+     * @param base64 The base64 encoded texture data
+     * @return A PlayerProfile with the custom texture applied
+     */
+    private static PlayerProfile createProfileWithTexture(String base64) {
         UUID id = new UUID(
-                b64.substring(b64.length() - 20).hashCode(),
-                b64.substring(b64.length() - 10).hashCode()
+                base64.substring(Math.max(0, base64.length() - 20)).hashCode(),
+                base64.substring(Math.max(0, base64.length() - 10)).hashCode()
         );
-        GameProfile profile = new GameProfile(id, "Player");
-        profile.getProperties().put("textures", new Property("textures", b64));
+        
+        PlayerProfile profile = Bukkit.createProfile(id, "");
+        profile.setProperty(new ProfileProperty("textures", base64));
+        
         return profile;
     }
 
+    /**
+     * Creates a PlayerProfile with custom texture from URL.
+     * Uses the Paper PlayerProfile API for Paper 1.21.9+.
+     * 
+     * @param url The texture URL
+     * @return A PlayerProfile with the custom texture applied
+     */
+    private static PlayerProfile createProfileWithUrl(String url) {
+        return createProfileWithTexture(urlToBase64(url));
+    }
+
     private static void mutateBlockState(Skull block, String b64) {
-        try {
-            if (blockProfileField == null) {
-                blockProfileField = block.getClass().getDeclaredField("profile");
-                blockProfileField.setAccessible(true);
-            }
-            blockProfileField.set(block, makeProfile(b64));
-        } catch (NoSuchFieldException | IllegalAccessException e) {
-            e.printStackTrace();
+        PlayerProfile profile = createProfileWithTexture(b64);
+        if (profile != null) {
+            block.setPlayerProfile(profile);
         }
     }
 
     private static void mutateItemMeta(SkullMeta meta, String b64) {
-        try {
-            if (metaSetProfileMethod == null) {
-                metaSetProfileMethod = meta.getClass().getDeclaredMethod("setProfile", GameProfile.class);
-                metaSetProfileMethod.setAccessible(true);
-            }
-            metaSetProfileMethod.invoke(meta, makeProfile(b64));
-        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException ex) {
-            // if in an older API where there is no setProfile method,
-            // we set the profile field directly.
-            try {
-                if (metaProfileField == null) {
-                    metaProfileField = meta.getClass().getDeclaredField("profile");
-                    metaProfileField.setAccessible(true);
-                }
-                metaProfileField.set(meta, makeProfile(b64));
-
-            } catch (NoSuchFieldException | IllegalAccessException ex2) {
-                ex2.printStackTrace();
-            }
+        PlayerProfile profile = createProfileWithTexture(b64);
+        if (profile != null) {
+            meta.setPlayerProfile(profile);
         }
     }
 
