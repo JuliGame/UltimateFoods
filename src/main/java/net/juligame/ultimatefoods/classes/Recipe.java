@@ -48,32 +48,16 @@ public class Recipe {
     }
 
     public static void removeRecipe(ItemStack itemStack){
-        ItemStack itemToRemove = null;
         if (itemStack == null || itemStack.getType().equals(Material.AIR))
             return;
 
-        List<org.bukkit.inventory.Recipe> recipes = UltimateFoods.instance.getServer().getRecipesFor(itemStack);
-
-        for (org.bukkit.inventory.Recipe recipe : recipes) {
-            if (recipe == null)
-                continue;
-
-            if(recipe.getResult().equals(itemStack)){
-                itemToRemove = recipe.getResult();
-                break;
+        Material targetMaterial = itemStack.getType();
+        Iterator<org.bukkit.inventory.Recipe> iterator = Bukkit.getServer().recipeIterator();
+        while (iterator.hasNext()) {
+            org.bukkit.inventory.Recipe recipe = iterator.next();
+            if (recipe != null && recipe.getResult().getType().equals(targetMaterial)) {
+                iterator.remove();
             }
-        }
-
-        if (itemToRemove != null) {
-            Iterator<org.bukkit.inventory.Recipe> iterator = Bukkit.getServer().recipeIterator();
-            while (iterator.hasNext()) {
-                org.bukkit.inventory.Recipe recipe = iterator.next();
-                if (recipe != null && recipe.getResult().equals(itemToRemove)) {
-                    iterator.remove();
-                }
-            }
-        } else {
-            Bukkit.getLogger().info("Item to remove not found");
         }
     }
 }
